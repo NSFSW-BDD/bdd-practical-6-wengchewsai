@@ -43,7 +43,7 @@ var jwtMiddleware = {
         res.status(200).json({
         message: res.locals.message,
         token: res.locals.token,
-    })
+    });
     },
      //////////////////////////////////////////////////////
   // MIDDLEWARE FUNCTION FOR VERIFYING JWT TOKEN
@@ -81,7 +81,7 @@ var jwtMiddleware = {
   },
   verifyAdmin: (req, res, next) => {
 
-    if (res.locals.role == "admin") {
+    if (res.locals.role == "Admin") {
 
       next();
 
